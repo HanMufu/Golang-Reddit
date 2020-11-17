@@ -1,0 +1,3 @@
+{"level":"DEBUG","time":"2020-11-16T20:57:46.702-0500","caller":"go-web-app/main.go:35","msg":"logger init success"}
+{"level":"ERROR","time":"2020-11-16T20:57:47.432-0500","caller":"mysql/mysql.go:27","msg":"connect DB failed","error":"Error 1049: Unknown database 'go-web-app'"}
+{"level":"DEBUG","time":"2020-11-16T21:01:35.609-0500","caller":"go-web-app/main.go:35","msg":"logger init success"}
