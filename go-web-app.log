@@ -1,3 +1,20 @@
 {"level":"DEBUG","time":"2020-11-16T20:57:46.702-0500","caller":"go-web-app/main.go:35","msg":"logger init success"}
 {"level":"ERROR","time":"2020-11-16T20:57:47.432-0500","caller":"mysql/mysql.go:27","msg":"connect DB failed","error":"Error 1049: Unknown database 'go-web-app'"}
 {"level":"DEBUG","time":"2020-11-16T21:01:35.609-0500","caller":"go-web-app/main.go:35","msg":"logger init success"}
+{"level":"DEBUG","time":"2020-11-16T21:47:17.379-0500","caller":"go-web-app/main.go:35","msg":"logger init success"}
+{"level":"DEBUG","time":"2020-11-16T21:47:37.803-0500","caller":"go-web-app/main.go:35","msg":"logger init success"}
+{"level":"INFO","time":"2020-11-16T21:47:43.419-0500","caller":"go-web-app/main.go:72","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2020-11-16T21:47:43.924-0500","caller":"go-web-app/main.go:82","msg":"Server exiting"}
+{"level":"DEBUG","time":"2020-11-16T21:55:17.510-0500","caller":"go-web-app/main.go:35","msg":"logger init success"}
+{"level":"INFO","time":"2020-11-16T21:55:25.494-0500","caller":"go-web-app/main.go:72","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2020-11-16T21:55:25.996-0500","caller":"go-web-app/main.go:82","msg":"Server exiting"}
+{"level":"DEBUG","time":"2020-11-17T16:22:48.424-0500","caller":"go-web-app/main.go:35","msg":"logger init success"}
+{"level":"INFO","time":"2020-11-17T16:23:03.598-0500","caller":"logger/logger.go:72","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36","errors":"","cost":0.00004312}
+{"level":"INFO","time":"2020-11-17T16:23:03.825-0500","caller":"logger/logger.go:72","msg":"/favicon.ico","status":404,"method":"GET","path":"/favicon.ico","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36","errors":"","cost":0.000000685}
+{"level":"INFO","time":"2020-11-17T16:23:05.237-0500","caller":"logger/logger.go:72","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36","errors":"","cost":0.000005937}
+{"level":"INFO","time":"2020-11-17T16:23:09.816-0500","caller":"go-web-app/main.go:72","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2020-11-17T16:23:10.316-0500","caller":"go-web-app/main.go:82","msg":"Server exiting"}
+{"level":"INFO","time":"2020-11-17T16:35:05.952-0500","caller":"go-web-app/main.go:72","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2020-11-17T16:35:06.457-0500","caller":"go-web-app/main.go:82","msg":"Server exiting"}
+{"level":"INFO","time":"2020-11-17T16:38:21.924-0500","caller":"go-web-app/main.go:70","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2020-11-17T16:38:22.429-0500","caller":"go-web-app/main.go:80","msg":"Server exiting"}
