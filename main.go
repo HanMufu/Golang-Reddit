@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
+	"go-web-app/controller"
 	"go-web-app/dao/mysql"
 	"go-web-app/dao/redis"
 	"go-web-app/logger"
@@ -48,6 +49,11 @@ func main() {
 	// 5. init snowflake
 	if err := snowflake.Init(settings.Conf.StartTime, settings.Conf.MachineID); err != nil {
 		fmt.Printf("Init snowflake failed, err:%v\n", err)
+		return
+	}
+
+	if err := controller.InitValidator("en"); err != nil {
+		fmt.Printf("init validator trans failed, err:%v\n", err)
 		return
 	}
 
