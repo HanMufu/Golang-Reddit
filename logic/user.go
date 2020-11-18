@@ -6,11 +6,19 @@ import (
 	"go-web-app/pkg/snowflake"
 )
 
-func SignUp(p *models.ParamSignUp) {
+func SignUp(p *models.ParamSignUp) (err error) {
 	// check if user existed
-	mysql.QueryUserByUsername()
+	if err := mysql.CheckUserExist(p.Username); err != nil {
+		return err
+	}
 	// generate UID
-	snowflake.GenID()
+	userID := snowflake.GenID()
+	user := &models.User{
+		UserID:   userID,
+		Username: p.Username,
+		Password: p.Password,
+	}
+
 	// write into database
-	mysql.InsertUser()
+	return mysql.InsertUser(user)
 }

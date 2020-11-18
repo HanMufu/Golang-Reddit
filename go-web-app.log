@@ -84,3 +84,12 @@
 {"level":"INFO","time":"2020-11-18T00:44:35.434-0500","caller":"logger/logger.go:67","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"::1","user-agent":"PostmanRuntime/7.26.5","errors":"","cost":0.000346053}
 {"level":"INFO","time":"2020-11-18T00:55:07.076-0500","caller":"go-web-app/main.go:84","msg":"Shutdown Server ..."}
 {"level":"INFO","time":"2020-11-18T00:55:07.581-0500","caller":"go-web-app/main.go:94","msg":"Server exiting"}
+{"level":"DEBUG","time":"2020-11-18T16:18:44.059-0500","caller":"go-web-app/main.go:35","msg":"logger init success"}
+{"level":"ERROR","time":"2020-11-18T16:19:29.748-0500","caller":"controller/user.go:19","msg":"signup with invalid param","error":"Key: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag\nKey: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag"}
+{"level":"INFO","time":"2020-11-18T16:19:29.748-0500","caller":"logger/logger.go:67","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"::1","user-agent":"PostmanRuntime/7.26.5","errors":"","cost":0.000974699}
+{"level":"INFO","time":"2020-11-18T16:19:50.557-0500","caller":"controller/user.go:34","msg":"User signup successfully"}
+{"level":"INFO","time":"2020-11-18T16:19:51.828-0500","caller":"logger/logger.go:67","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"::1","user-agent":"PostmanRuntime/7.26.5","errors":"","cost":1.270616031}
+{"level":"INFO","time":"2020-11-18T16:36:05.823-0500","caller":"controller/user.go:34","msg":"User signup successfully"}
+{"level":"INFO","time":"2020-11-18T16:36:06.200-0500","caller":"logger/logger.go:67","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"::1","user-agent":"PostmanRuntime/7.26.5","errors":"","cost":0.376936981}
+{"level":"INFO","time":"2020-11-18T16:38:48.118-0500","caller":"go-web-app/main.go:84","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2020-11-18T16:38:48.120-0500","caller":"go-web-app/main.go:94","msg":"Server exiting"}

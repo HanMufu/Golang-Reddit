@@ -14,7 +14,6 @@ import (
 
 func SignUpHandler(c *gin.Context) {
 	// get parameters and validate them
-	//var p models.ParamSignUp
 	p := new(models.ParamSignUp)
 	if err := c.ShouldBindJSON(p); err != nil {
 		zap.L().Error("signup with invalid param", zap.Error(err))
@@ -34,7 +33,13 @@ func SignUpHandler(c *gin.Context) {
 
 	zap.L().Info("User signup successfully")
 	// business logic
-	logic.SignUp(p)
+	if err := logic.SignUp(p); err != nil {
+		zap.L().Error("Signup failed", zap.Error(err))
+		c.JSON(http.StatusOK, gin.H{
+			"msg": "singup failed",
+		})
+		return
+	}
 	// return responses
 	c.JSON(http.StatusOK, gin.H{
 		"msg": "success",
