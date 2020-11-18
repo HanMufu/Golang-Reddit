@@ -1,3 +1,5 @@
-# Golang-Web-App-Scaffolding
+# Golang-Web-App
 
-A scaffolding for Golang web application. 
+A Golang web application using Gin, MySQL, Redis, viper and zap. 
+
+MySQL and Redis are deployed on remote server by Docker. 
