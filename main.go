@@ -58,7 +58,7 @@ func main() {
 	}
 
 	// 6. register routers
-	r := routes.Setup()
+	r := routes.Setup(settings.Conf.Mode)
 	// 7. setup shutdown gracefully
 	srv := &http.Server{
 		Addr:    fmt.Sprintf(":%d", settings.Conf.Port),

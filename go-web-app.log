@@ -93,3 +93,11 @@
 {"level":"INFO","time":"2020-11-18T16:36:06.200-0500","caller":"logger/logger.go:67","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"::1","user-agent":"PostmanRuntime/7.26.5","errors":"","cost":0.376936981}
 {"level":"INFO","time":"2020-11-18T16:38:48.118-0500","caller":"go-web-app/main.go:84","msg":"Shutdown Server ..."}
 {"level":"INFO","time":"2020-11-18T16:38:48.120-0500","caller":"go-web-app/main.go:94","msg":"Server exiting"}
+{"level":"DEBUG","time":"2020-11-18T16:48:02.217-0500","caller":"go-web-app/main.go:35","msg":"logger init success"}
+{"level":"INFO","time":"2020-11-18T16:48:08.876-0500","caller":"go-web-app/main.go:84","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2020-11-18T16:48:09.380-0500","caller":"go-web-app/main.go:94","msg":"Server exiting"}
+{"level":"DEBUG","time":"2020-11-18T16:49:13.039-0500","caller":"go-web-app/main.go:35","msg":"logger init success"}
+{"level":"ERROR","time":"2020-11-18T16:49:19.155-0500","caller":"controller/user.go:19","msg":"signup with invalid param","error":"Key: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag\nKey: 'ParamSignUp.re_password' Error:Field validation for 're_password' failed on the 'eqfield' tag"}
+{"level":"INFO","time":"2020-11-18T16:49:19.156-0500","caller":"logger/logger.go:75","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"::1","user-agent":"PostmanRuntime/7.26.5","errors":"","cost":0.000360522}
+{"level":"INFO","time":"2020-11-18T16:50:23.734-0500","caller":"go-web-app/main.go:84","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2020-11-18T16:50:24.238-0500","caller":"go-web-app/main.go:94","msg":"Server exiting"}
