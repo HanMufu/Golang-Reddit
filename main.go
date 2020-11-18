@@ -6,6 +6,7 @@ import (
 	"go-web-app/dao/mysql"
 	"go-web-app/dao/redis"
 	"go-web-app/logger"
+	"go-web-app/pkg/snowflake"
 	"go-web-app/routes"
 	"go-web-app/settings"
 	"log"
@@ -19,40 +20,47 @@ import (
 )
 
 func main() {
-	// 1. 加载配置 load config files
+	// 1. load config files
 	if err := settings.Init(); err != nil {
 		fmt.Printf("Init settings failed, err:%v\n", err)
 		return
 	}
-	// 2. 初始化日志 init uber/zap logger
+	// 2. init uber/zap logger
 	if err := logger.Init(settings.Conf.LogConfig, settings.Conf.Mode); err != nil {
 		fmt.Printf("Init logger failed, err:%v\n", err)
 		return
 	}
-	//defer zap.L().Sync()
-	//zap.L().Debug("logger init success")
-	// 3. 初始化MySQL init mysql
+	defer zap.L().Sync()
+	zap.L().Debug("logger init success")
+	// 3. init mysql
 	if err := mysql.Init(settings.Conf.MySQLConfig); err != nil {
 		fmt.Printf("Init mysql failed, err:%v\n", err)
 		return
 	}
 	defer mysql.Close()
-	// 4. 初始化Redis init redis
+	// 4. init redis
 	if err := redis.Init(settings.Conf.RedisConfig); err != nil {
 		fmt.Printf("Init redis failed, err:%v\n", err)
 		return
 	}
 	defer redis.Close()
-	// 5. 注册路由 register routers
+
+	// 5. init snowflake
+	if err := snowflake.Init(settings.Conf.StartTime, settings.Conf.MachineID); err != nil {
+		fmt.Printf("Init snowflake failed, err:%v\n", err)
+		return
+	}
+
+	// 6. register routers
 	r := routes.Setup()
-	// 6. 启动服务（优雅关机）shoutdown gracefully
+	// 7. setup shutdown gracefully
 	srv := &http.Server{
 		Addr:    fmt.Sprintf(":%d", settings.Conf.Port),
 		Handler: r,
 	}
 
 	go func() {
-		// 开启一个goroutine启动服务 start another goroutine
+		// use another goroutine
 		if err := srv.ListenAndServe(); err != nil && err != http.ErrServerClosed {
 			log.Fatalf("listen: %s\n", err)
 		}
