@@ -2,6 +2,7 @@ package mysql
 
 import (
 	"crypto/md5"
+	"database/sql"
 	"encoding/hex"
 	"errors"
 	"go-web-app/models"
@@ -33,4 +34,21 @@ func encryptPassword(oPassword string) string {
 	h := md5.New()
 	h.Write([]byte(secret))
 	return hex.EncodeToString(h.Sum([]byte(oPassword)))
+}
+
+func Login(user *models.User) (err error) {
+	oPassword := user.Password
+	sqlStr := "select user_id, username, password from user where username=?"
+	err = db.Get(user, sqlStr, user.Username)
+	if err == sql.ErrNoRows {
+		return errors.New("User is not existed")
+	}
+	if err != nil {
+		return
+	}
+	password := encryptPassword(oPassword)
+	if password != user.Password {
+		return errors.New("Wrong password")
+	}
+	return
 }

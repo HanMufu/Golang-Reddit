@@ -101,3 +101,16 @@
 {"level":"INFO","time":"2020-11-18T16:49:19.156-0500","caller":"logger/logger.go:75","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"::1","user-agent":"PostmanRuntime/7.26.5","errors":"","cost":0.000360522}
 {"level":"INFO","time":"2020-11-18T16:50:23.734-0500","caller":"go-web-app/main.go:84","msg":"Shutdown Server ..."}
 {"level":"INFO","time":"2020-11-18T16:50:24.238-0500","caller":"go-web-app/main.go:94","msg":"Server exiting"}
+{"level":"DEBUG","time":"2020-11-18T17:10:50.328-0500","caller":"go-web-app/main.go:35","msg":"logger init success"}
+{"level":"ERROR","time":"2020-11-18T17:11:04.273-0500","caller":"controller/user.go:52","msg":"login with invalid param","error":"invalid character '}' looking for beginning of object key string"}
+{"level":"INFO","time":"2020-11-18T17:11:04.273-0500","caller":"logger/logger.go:75","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"::1","user-agent":"PostmanRuntime/7.26.5","errors":"","cost":0.000228516}
+{"level":"INFO","time":"2020-11-18T17:11:13.309-0500","caller":"logger/logger.go:75","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"::1","user-agent":"PostmanRuntime/7.26.5","errors":"","cost":0.377167433}
+{"level":"ERROR","time":"2020-11-18T17:11:22.238-0500","caller":"controller/user.go:67","msg":"logic.Login failed","error":"Wrong password"}
+{"level":"INFO","time":"2020-11-18T17:11:22.238-0500","caller":"logger/logger.go:75","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"::1","user-agent":"PostmanRuntime/7.26.5","errors":"","cost":0.375980631}
+{"level":"INFO","time":"2020-11-18T17:11:26.570-0500","caller":"logger/logger.go:75","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"::1","user-agent":"PostmanRuntime/7.26.5","errors":"","cost":0.376334976}
+{"level":"INFO","time":"2020-11-18T17:12:50.999-0500","caller":"go-web-app/main.go:84","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2020-11-18T17:12:51.503-0500","caller":"go-web-app/main.go:94","msg":"Server exiting"}
+{"level":"DEBUG","time":"2020-11-18T17:12:55.304-0500","caller":"go-web-app/main.go:35","msg":"logger init success"}
+{"level":"INFO","time":"2020-11-18T17:13:03.908-0500","caller":"logger/logger.go:75","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"::1","user-agent":"PostmanRuntime/7.26.5","errors":"","cost":0.381143521}
+{"level":"INFO","time":"2020-11-18T17:13:44.456-0500","caller":"go-web-app/main.go:84","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2020-11-18T17:13:44.961-0500","caller":"go-web-app/main.go:94","msg":"Server exiting"}
