@@ -1,6 +1,8 @@
 package controller
 
 import (
+	"errors"
+	"go-web-app/dao/mysql"
 	"go-web-app/logic"
 	"go-web-app/models"
 	"net/http"
@@ -19,15 +21,14 @@ func SignUpHandler(c *gin.Context) {
 		zap.L().Error("signup with invalid param", zap.Error(err))
 		errs, ok := err.(validator.ValidationErrors)
 		if !ok {
-			c.JSON(http.StatusOK, gin.H{
-				"msg": err.Error(),
-			})
+			ResponseError(c, CodeInvalidParam)
 			return
 		}
-		//ResponseErrorWithMsg(c, CodeInvalidParam, removeTopStruct(errs.Translate(trans)))
-		c.JSON(http.StatusOK, gin.H{
-			"msg": removeTopStruct(errs.Translate(trans)),
-		})
+		ResponseErrorWithMsg(c, CodeInvalidParam, removeTopStruct(errs.Translate(trans)))
+		//c.JSON(http.StatusOK, gin.H{
+		//	"msg": removeTopStruct(errs.Translate(trans)),
+		//})
+
 		return
 	}
 
@@ -35,15 +36,18 @@ func SignUpHandler(c *gin.Context) {
 	// business logic
 	if err := logic.SignUp(p); err != nil {
 		zap.L().Error("Signup failed", zap.Error(err))
-		c.JSON(http.StatusOK, gin.H{
-			"msg": "singup failed",
-		})
+		if errors.Is(err, mysql.ErrorUserExist) {
+			ResponseError(c, CodeUserExist)
+			return
+		}
+		ResponseError(c, CodeServerBusy)
 		return
 	}
 	// return responses
 	c.JSON(http.StatusOK, gin.H{
 		"msg": "success",
 	})
+	ResponseSuccess(c, nil)
 }
 
 func LoginHandler(c *gin.Context) {
@@ -52,25 +56,20 @@ func LoginHandler(c *gin.Context) {
 		zap.L().Error("login with invalid param", zap.Error(err))
 		errs, ok := err.(validator.ValidationErrors)
 		if !ok {
-			c.JSON(http.StatusOK, gin.H{
-				"msg": err.Error(),
-			})
+			ResponseError(c, CodeInvalidParam)
 			return
 		}
-		//ResponseErrorWithMsg(c, CodeInvalidParam, removeTopStruct(errs.Translate(trans)))
-		c.JSON(http.StatusOK, gin.H{
-			"msg": removeTopStruct(errs.Translate(trans)),
-		})
+		ResponseErrorWithMsg(c, CodeInvalidParam, removeTopStruct(errs.Translate(trans)))
 		return
 	}
 	if err := logic.Login(p); err != nil {
 		zap.L().Error("logic.Login failed", zap.String("username", p.Username), zap.Error(err))
-		c.JSON(http.StatusOK, gin.H{
-			"msg": "Login failed, wrong username or password",
-		})
+		if errors.Is(err, mysql.ErrorUserNotExist) {
+			ResponseError(c, CodeUserNotExist)
+			return
+		}
+		ResponseError(c, CodeInvalidPassword)
 		return
 	}
-	c.JSON(http.StatusOK, gin.H{
-		"msg": "Login succeed",
-	})
+	ResponseSuccess(c, nil)
 }

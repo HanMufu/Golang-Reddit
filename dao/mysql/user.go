@@ -10,6 +10,12 @@ import (
 
 const secret = "hanmufu.com"
 
+var (
+	ErrorUserExist       = errors.New("User existed")
+	ErrorUserNotExist    = errors.New("User is not existed")
+	ErrorInvalidPassword = errors.New("Wrong password")
+)
+
 func CheckUserExist(username string) (err error) {
 	sqlStr := "select count(user_id) from user where username = ?"
 	var count int
@@ -17,7 +23,7 @@ func CheckUserExist(username string) (err error) {
 		return err
 	}
 	if count > 0 {
-		return errors.New("User existed")
+		return ErrorUserExist
 	}
 	return
 }
@@ -41,14 +47,14 @@ func Login(user *models.User) (err error) {
 	sqlStr := "select user_id, username, password from user where username=?"
 	err = db.Get(user, sqlStr, user.Username)
 	if err == sql.ErrNoRows {
-		return errors.New("User is not existed")
+		return ErrorUserNotExist
 	}
 	if err != nil {
 		return
 	}
 	password := encryptPassword(oPassword)
 	if password != user.Password {
-		return errors.New("Wrong password")
+		return ErrorInvalidPassword
 	}
 	return
 }
