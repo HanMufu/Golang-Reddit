@@ -17,10 +17,10 @@ func Setup(mode string) *gin.Engine {
 	r.Use(logger.GinLogger(), logger.GinRecovery(true))
 
 	// user register
-	r.POST("/signup", controller.SignUpHandler)
+	r.POST("/api/v1/signup", controller.SignUpHandler)
 
 	// user login
-	r.POST("/login", controller.LoginHandler)
+	r.POST("/api/v1/login", controller.LoginHandler)
 
 	r.GET("/", func(context *gin.Context) {
 		context.String(http.StatusOK, "ok")

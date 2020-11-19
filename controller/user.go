@@ -5,7 +5,6 @@ import (
 	"go-web-app/dao/mysql"
 	"go-web-app/logic"
 	"go-web-app/models"
-	"net/http"
 
 	"github.com/go-playground/validator/v10"
 
@@ -44,9 +43,6 @@ func SignUpHandler(c *gin.Context) {
 		return
 	}
 	// return responses
-	c.JSON(http.StatusOK, gin.H{
-		"msg": "success",
-	})
 	ResponseSuccess(c, nil)
 }
 
