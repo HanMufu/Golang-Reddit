@@ -126,3 +126,9 @@
 {"level":"INFO","time":"2020-11-18T21:46:31.081-0500","caller":"logger/logger.go:75","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"::1","user-agent":"PostmanRuntime/7.26.5","errors":"","cost":0.394460881}
 {"level":"INFO","time":"2020-11-18T22:02:00.581-0500","caller":"go-web-app/main.go:84","msg":"Shutdown Server ..."}
 {"level":"INFO","time":"2020-11-18T22:02:01.087-0500","caller":"go-web-app/main.go:94","msg":"Server exiting"}
+{"level":"DEBUG","time":"2020-11-19T13:09:21.447-0500","caller":"go-web-app/main.go:35","msg":"logger init success"}
+{"level":"INFO","time":"2020-11-19T13:09:29.698-0500","caller":"logger/logger.go:75","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"::1","user-agent":"PostmanRuntime/7.26.5","errors":"","cost":0.389572274}
+{"level":"INFO","time":"2020-11-19T13:09:34.471-0500","caller":"logger/logger.go:75","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"::1","user-agent":"PostmanRuntime/7.26.5","errors":"","cost":0.396967898}
+{"level":"INFO","time":"2020-11-19T13:09:36.047-0500","caller":"logger/logger.go:75","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"::1","user-agent":"PostmanRuntime/7.26.5","errors":"","cost":0.376496472}
+{"level":"INFO","time":"2020-11-19T13:09:39.512-0500","caller":"go-web-app/main.go:84","msg":"Shutdown Server ..."}
+{"level":"INFO","time":"2020-11-19T13:09:40.013-0500","caller":"go-web-app/main.go:94","msg":"Server exiting"}
