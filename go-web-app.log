@@ -217,3 +217,7 @@
 {"level":"ERROR","time":"2020-11-19T21:17:57.946-0500","caller":"controller/post.go:16","msg":"create post with invalid param"}
 {"level":"INFO","time":"2020-11-19T21:17:57.946-0500","caller":"logger/logger.go:75","msg":"/api/v1/post","status":200,"method":"POST","path":"/api/v1/post","query":"","ip":"::1","user-agent":"PostmanRuntime/7.26.5","errors":"","cost":0.000546441}
 {"level":"INFO","time":"2020-11-19T21:18:09.941-0500","caller":"logger/logger.go:75","msg":"/api/v1/post","status":200,"method":"POST","path":"/api/v1/post","query":"","ip":"::1","user-agent":"PostmanRuntime/7.26.5","errors":"","cost":0.414101092}
+{"level":"DEBUG","time":"2020-11-19T21:37:08.548-0500","caller":"go-web-app/main.go:35","msg":"logger init success"}
+{"level":"INFO","time":"2020-11-19T21:37:58.354-0500","caller":"logger/logger.go:75","msg":"/api/v1/post/51493845707264000","status":200,"method":"POST","path":"/api/v1/post/51493845707264000","query":"","ip":"::1","user-agent":"PostmanRuntime/7.26.5","errors":"","cost":0.38958864}
+{"level":"DEBUG","time":"2020-11-19T21:39:27.831-0500","caller":"go-web-app/main.go:35","msg":"logger init success"}
+{"level":"INFO","time":"2020-11-19T21:39:33.480-0500","caller":"logger/logger.go:75","msg":"/api/v1/post/51493845707264000","status":200,"method":"POST","path":"/api/v1/post/51493845707264000","query":"","ip":"::1","user-agent":"PostmanRuntime/7.26.5","errors":"","cost":0.389014733}

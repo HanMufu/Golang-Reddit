@@ -10,3 +10,7 @@ func CreatePost(p *models.Post) (err error) {
 	p.PostID = snowflake.GenID()
 	return mysql.CreatePost(p)
 }
+
+func GetPostById(pid int64) (data *models.Post, err error) {
+	return mysql.GetPostById(pid)
+}
