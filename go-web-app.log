@@ -207,3 +207,13 @@
 {"level":"INFO","time":"2020-11-19T20:29:26.214-0500","caller":"logger/logger.go:75","msg":"/api/v1/community","status":200,"method":"GET","path":"/api/v1/community","query":"","ip":"::1","user-agent":"PostmanRuntime/7.26.5","errors":"","cost":0.193183107}
 {"level":"INFO","time":"2020-11-19T20:29:36.390-0500","caller":"logger/logger.go:75","msg":"/api/v1/community///","status":404,"method":"GET","path":"/api/v1/community///","query":"","ip":"::1","user-agent":"PostmanRuntime/7.26.5","errors":"","cost":0.000014376}
 {"level":"INFO","time":"2020-11-19T20:29:40.837-0500","caller":"logger/logger.go:75","msg":"/api/v1/community","status":200,"method":"GET","path":"/api/v1/community","query":"","ip":"::1","user-agent":"PostmanRuntime/7.26.5","errors":"","cost":0.195097584}
+{"level":"DEBUG","time":"2020-11-19T21:12:57.827-0500","caller":"go-web-app/main.go:35","msg":"logger init success"}
+{"level":"INFO","time":"2020-11-19T21:13:45.233-0500","caller":"logger/logger.go:75","msg":"/api/v1/post","status":200,"method":"POST","path":"/api/v1/post","query":"","ip":"::1","user-agent":"PostmanRuntime/7.26.5","errors":"","cost":0.407002278}
+{"level":"DEBUG","time":"2020-11-19T21:16:11.143-0500","caller":"go-web-app/main.go:35","msg":"logger init success"}
+{"level":"INFO","time":"2020-11-19T21:16:15.652-0500","caller":"logger/logger.go:75","msg":"/api/v1/post","status":200,"method":"POST","path":"/api/v1/post","query":"","ip":"::1","user-agent":"PostmanRuntime/7.26.5","errors":"","cost":0.413047175}
+{"level":"DEBUG","time":"2020-11-19T21:16:50.718-0500","caller":"go-web-app/main.go:35","msg":"logger init success"}
+{"level":"DEBUG","time":"2020-11-19T21:17:26.229-0500","caller":"go-web-app/main.go:35","msg":"logger init success"}
+{"level":"DEBUG","time":"2020-11-19T21:17:57.946-0500","caller":"controller/post.go:15","msg":"c.ShouldBindJSON(p) error","err":"Key: 'Post.community_id' Error:Field validation for 'community_id' failed on the 'required' tag"}
+{"level":"ERROR","time":"2020-11-19T21:17:57.946-0500","caller":"controller/post.go:16","msg":"create post with invalid param"}
+{"level":"INFO","time":"2020-11-19T21:17:57.946-0500","caller":"logger/logger.go:75","msg":"/api/v1/post","status":200,"method":"POST","path":"/api/v1/post","query":"","ip":"::1","user-agent":"PostmanRuntime/7.26.5","errors":"","cost":0.000546441}
+{"level":"INFO","time":"2020-11-19T21:18:09.941-0500","caller":"logger/logger.go:75","msg":"/api/v1/post","status":200,"method":"POST","path":"/api/v1/post","query":"","ip":"::1","user-agent":"PostmanRuntime/7.26.5","errors":"","cost":0.414101092}
