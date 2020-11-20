@@ -4,17 +4,10 @@ import (
 	"crypto/md5"
 	"database/sql"
 	"encoding/hex"
-	"errors"
 	"go-web-app/models"
 )
 
 const secret = "hanmufu.com"
-
-var (
-	ErrorUserExist       = errors.New("User existed")
-	ErrorUserNotExist    = errors.New("User is not existed")
-	ErrorInvalidPassword = errors.New("Wrong password")
-)
 
 func CheckUserExist(username string) (err error) {
 	sqlStr := "select count(user_id) from user where username = ?"
