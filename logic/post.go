@@ -3,6 +3,7 @@ package logic
 import (
 	"fmt"
 	"go-web-app/dao/mysql"
+	"go-web-app/dao/redis"
 	"go-web-app/models"
 	"go-web-app/pkg/snowflake"
 
@@ -11,7 +12,12 @@ import (
 
 func CreatePost(p *models.Post) (err error) {
 	p.PostID = snowflake.GenID()
-	return mysql.CreatePost(p)
+	err = mysql.CreatePost(p)
+	if err != nil {
+		return err
+	}
+	err = redis.CreatePost(p.PostID, p.CommunityID)
+	return
 }
 
 func GetPostById(pid int64) (data *models.PostDetail, err error) {
