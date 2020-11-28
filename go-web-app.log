@@ -335,3 +335,32 @@
 {"level":"DEBUG","time":"2020-11-20T21:56:11.300-0500","caller":"logic/vote.go:28","msg":"VoteForPost","userID":51056387379171328,"postID":"51865724255211520","direction":1}
 {"level":"DEBUG","time":"2020-11-20T21:56:11.497-0500","caller":"redis/vote.go:46","msg":"postTime: ","posttime":1605927352}
 {"level":"INFO","time":"2020-11-20T21:56:11.870-0500","caller":"logger/logger.go:75","msg":"/api/v1/vote","status":200,"method":"POST","path":"/api/v1/vote","query":"","ip":"::1","user-agent":"PostmanRuntime/7.26.5","errors":"","cost":0.569352103}
+{"level":"DEBUG","time":"2020-11-25T22:23:36.166-0500","caller":"go-web-app/main.go:35","msg":"logger init success"}
+{"level":"INFO","time":"2020-11-25T22:24:08.072-0500","caller":"logger/logger.go:75","msg":"/api/v1/posts2","status":404,"method":"POST","path":"/api/v1/posts2","query":"page=1&size=2&order=time","ip":"::1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.000224655}
+{"level":"INFO","time":"2020-11-25T22:24:30.425-0500","caller":"logger/logger.go:75","msg":"/api/v1/posts2 ","status":404,"method":"POST","path":"/api/v1/posts2 ","query":"page=1&size=2&order=time","ip":"::1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.000015028}
+{"level":"INFO","time":"2020-11-25T22:24:38.684-0500","caller":"logger/logger.go:75","msg":"/api/v1/posts2","status":404,"method":"POST","path":"/api/v1/posts2","query":"page=1&size=2&order=time","ip":"::1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.000023937}
+{"level":"WARN","time":"2020-11-25T22:24:54.028-0500","caller":"logic/post.go:81","msg":"redis.GetPostIDsInRoder(p) return empty dataset"}
+{"level":"INFO","time":"2020-11-25T22:24:54.028-0500","caller":"logger/logger.go:75","msg":"/api/v1/posts2","status":200,"method":"GET","path":"/api/v1/posts2","query":"page=1&size=2&order=time","ip":"::1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.852495929}
+{"level":"DEBUG","time":"2020-11-25T22:36:17.976-0500","caller":"go-web-app/main.go:35","msg":"logger init success"}
+{"level":"WARN","time":"2020-11-25T22:36:33.237-0500","caller":"logic/post.go:81","msg":"redis.GetPostIDsInRoder(p) return empty dataset"}
+{"level":"INFO","time":"2020-11-25T22:36:33.237-0500","caller":"logger/logger.go:75","msg":"/api/v1/posts2","status":200,"method":"GET","path":"/api/v1/posts2","query":"page=1&size=2&order=time","ip":"::1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.192479256}
+{"level":"WARN","time":"2020-11-25T22:37:39.983-0500","caller":"logic/post.go:81","msg":"redis.GetPostIDsInRoder(p) return empty dataset"}
+{"level":"INFO","time":"2020-11-25T22:37:39.983-0500","caller":"logger/logger.go:75","msg":"/api/v1/posts2","status":200,"method":"GET","path":"/api/v1/posts2","query":"page=1&size=2&order=time","ip":"::1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.19199589}
+{"level":"WARN","time":"2020-11-25T22:40:59.254-0500","caller":"logic/post.go:81","msg":"redis.GetPostIDsInRoder(p) return empty dataset"}
+{"level":"INFO","time":"2020-11-25T22:40:59.254-0500","caller":"logger/logger.go:75","msg":"/api/v1/posts2","status":200,"method":"GET","path":"/api/v1/posts2","query":"page=1&size=1&order=time","ip":"::1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.189735105}
+{"level":"WARN","time":"2020-11-25T22:41:06.944-0500","caller":"logic/post.go:81","msg":"redis.GetPostIDsInRoder(p) return empty dataset"}
+{"level":"INFO","time":"2020-11-25T22:41:06.944-0500","caller":"logger/logger.go:75","msg":"/api/v1/posts2","status":200,"method":"GET","path":"/api/v1/posts2","query":"page=1&size=2&order=time","ip":"::1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.188806204}
+{"level":"INFO","time":"2020-11-25T22:46:59.690-0500","caller":"logger/logger.go:75","msg":"/api/v1/post","status":200,"method":"POST","path":"/api/v1/post","query":"","ip":"::1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":1.432468591}
+{"level":"INFO","time":"2020-11-25T22:48:15.585-0500","caller":"logger/logger.go:75","msg":"/api/v1/post","status":200,"method":"POST","path":"/api/v1/post","query":"","ip":"::1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.581393383}
+{"level":"INFO","time":"2020-11-25T22:48:19.404-0500","caller":"logger/logger.go:75","msg":"/api/v1/post","status":200,"method":"POST","path":"/api/v1/post","query":"","ip":"::1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.57547458}
+{"level":"INFO","time":"2020-11-25T22:48:22.191-0500","caller":"logger/logger.go:75","msg":"/api/v1/post","status":200,"method":"POST","path":"/api/v1/post","query":"","ip":"::1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.572871755}
+{"level":"INFO","time":"2020-11-25T22:48:25.085-0500","caller":"logger/logger.go:75","msg":"/api/v1/post","status":200,"method":"POST","path":"/api/v1/post","query":"","ip":"::1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.588386236}
+{"level":"INFO","time":"2020-11-25T22:48:33.837-0500","caller":"logger/logger.go:75","msg":"/api/v1/posts2","status":200,"method":"GET","path":"/api/v1/posts2","query":"page=1&size=2&order=time","ip":"::1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.712769668}
+{"level":"DEBUG","time":"2020-11-25T22:55:23.808-0500","caller":"go-web-app/main.go:35","msg":"logger init success"}
+{"level":"DEBUG","time":"2020-11-25T22:55:51.054-0500","caller":"go-web-app/main.go:35","msg":"logger init success"}
+{"level":"INFO","time":"2020-11-25T22:56:02.290-0500","caller":"logger/logger.go:75","msg":"/api/v1/posts2","status":200,"method":"GET","path":"/api/v1/posts2","query":"page=1&size=2&order=time","ip":"::1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":2.478473141}
+{"level":"DEBUG","time":"2020-11-26T00:03:54.508-0500","caller":"go-web-app/main.go:35","msg":"logger init success"}
+{"level":"INFO","time":"2020-11-26T00:06:12.974-0500","caller":"logger/logger.go:75","msg":"/api/v1/posts2","status":200,"method":"GET","path":"/api/v1/posts2","query":"page=1&size=2&order=time","ip":"::1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":2.644628054}
+{"level":"DEBUG","time":"2020-11-26T00:10:09.760-0500","caller":"go-web-app/main.go:35","msg":"logger init success"}
+{"level":"DEBUG","time":"2020-11-26T00:57:40.890-0500","caller":"go-web-app/main.go:35","msg":"logger init success"}
+{"level":"DEBUG","time":"2020-11-26T01:21:11.073-0500","caller":"go-web-app/main.go:35","msg":"logger init success"}
