@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"go-web-app/controller"
+	"go-web-app/dao/mongodb"
 	"go-web-app/dao/mysql"
 	"go-web-app/dao/redis"
 	"go-web-app/logger"
@@ -45,6 +46,13 @@ func main() {
 		return
 	}
 	defer redis.Close()
+
+	// 5. init mongodb
+	if err := mongodb.Init(settings.Conf.MongodbConfig); err != nil {
+		fmt.Printf("Init mongodb failed, err:%v\n", err)
+		return
+	}
+	defer mongodb.Close()
 
 	// 5. init snowflake
 	if err := snowflake.Init(settings.Conf.StartTime, settings.Conf.MachineID); err != nil {

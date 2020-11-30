@@ -2,10 +2,8 @@ package routes
 
 import (
 	"go-web-app/controller"
-	"go-web-app/logger"
 	"go-web-app/middlewares"
 	"net/http"
-	"time"
 
 	"github.com/gin-gonic/gin"
 )
@@ -15,7 +13,9 @@ func Setup(mode string) *gin.Engine {
 		gin.SetMode(gin.ReleaseMode)
 	}
 	r := gin.New()
-	r.Use(logger.GinLogger(), logger.GinRecovery(true), middlewares.RateLimitMiddleware(2*time.Second, 1))
+
+	// use token bucket for traffic shaping and rate limiting
+	//r.Use(logger.GinLogger(), logger.GinRecovery(true), middlewares.RateLimitMiddleware(2*time.Second, 1))
 
 	r.GET("/ping", func(c *gin.Context) {
 		c.String(http.StatusOK, "pong")
@@ -41,6 +41,8 @@ func Setup(mode string) *gin.Engine {
 		v1.GET("/posts2", controller.GetPostListHandler2)
 
 		v1.POST("/vote", controller.PostVoteHandler)
+
+		v1.GET("/event/:id", controller.GetEventHandler)
 	}
 
 	//r.GET("/", func(context *gin.Context) {

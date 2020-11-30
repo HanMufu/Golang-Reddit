@@ -1,4 +1,4 @@
-package main
+package mongodb
 
 import (
 	"context"
@@ -8,10 +8,10 @@ import (
 	"go-web-app/settings"
 	"log"
 
+	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 	"go.uber.org/zap"
-	"gopkg.in/mgo.v2/bson"
 )
 
 // You will be using this Trainer type later in the program
@@ -79,7 +79,7 @@ func main() {
 	if err := Init(settings.Conf.MongodbConfig); err != nil {
 		return
 	}
-
+	// ****************************
 	collection := client.Database("bluebell").Collection("event")
 
 	filter := bson.M{"event_name": "Philadelphia Eagles vs. Seattle Seahawks"}
@@ -95,4 +95,5 @@ func main() {
 		return
 	}
 	return
+	// ****************************
 }
