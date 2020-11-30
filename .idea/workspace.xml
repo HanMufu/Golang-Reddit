@@ -20,15 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ea9b48f-f4a7-4965-bd82-7a9df3d935c9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controller/event.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dao/mongodb/event.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logic/event.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/mongodb/mongodb.go" beforeDir="false" afterPath="$PROJECT_DIR$/dao/mongodb/mongodb.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-web-app.log" beforeDir="false" afterPath="$PROJECT_DIR$/go-web-app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/routes.go" beforeDir="false" afterPath="$PROJECT_DIR$/routes/routes.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/main" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/main" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
