@@ -1,0 +1,32 @@
+version: "3.7"
+services:
+  bluebell_mysql:
+    image: "mysql:8.0.19"
+    ports:
+      - "33061:3306"
+    command: "--default-authentication-plugin=mysql_native_password --init-file /data/application/init.sql"
+    environment:
+      MYSQL_ROOT_PASSWORD: "root1234"
+      MYSQL_DATABASE: "bubble"
+      MYSQL_PASSWORD: "root1234"
+    volumes:
+      - ./init.sql:/data/application/init.sql
+  bluebell_redis:
+    image: "redis:5.0.7"
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: mve9BUf4nG
+    ports:
+      - "26379:6379"
+  bluebell_mongodb:
+    image: mongo
+    ports:
+      - "27017:27017"
+  bluebell_app:
+    build: .
+    command: sh -c "./wait-for.sh mysql8019:3306 -- ./bubble ./conf/config.ini"
+    depends_on:
+      - mysql8019
+    ports:
+      - "8888:8888"
